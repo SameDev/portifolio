@@ -29,10 +29,11 @@
                 <div class="footer-section links-section">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><NuxtLink to="/#sobre">Sobre Mim</NuxtLink></li>
-                        <li><NuxtLink to="/#projetos">Projetos</NuxtLink></li>
-                        <li><NuxtLink to="/#experiencia">Experiência</NuxtLink></li>
-                        <li><NuxtLink to="/#contato">Contato</NuxtLink></li>
+                        <li><NuxtLink to="/#about-me">Sobre Mim</NuxtLink></li>
+                        <li><NuxtLink to="/#main-projects">Projetos</NuxtLink></li>
+                        <li><NuxtLink to="/#professional-experience">Experiência</NuxtLink></li>
+                        <li><NuxtLink to="/#ai-projects">Artigos e IA</NuxtLink></li>
+                        <li><NuxtLink to="/#contact">Contato</NuxtLink></li>
                     </ul>
                 </div>
 

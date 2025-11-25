@@ -11,7 +11,7 @@
             <a class="btn btn-primary" href="https://github.com/SameDev" target="_blank">
                 <i class="fa-brands fa-github"></i> GitHub
             </a>
-            <a class="btn btn-primary" href="https://portifolio-samuel.vercel.app/" target="_blank">
+            <a class="btn btn-primary" href="https://samuel.redstoneweb.com.br/" target="_blank">
                 <i class="fa-solid fa-link"></i> Portfólio
             </a>
         </div>
