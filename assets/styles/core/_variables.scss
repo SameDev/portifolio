@@ -1,0 +1,73 @@
+@use "sass:color";
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap");
+
+$primary-color: #ef233c;
+$primary-color-hover: color.scale(
+    $primary-color,
+    $lightness: -15%,
+    $space: hsl
+);
+$secondary-color: #f8f8f8;
+$background-color-dark: linear-gradient(to right, #333, #444);
+$background-color-light: linear-gradient(to right, #f8f8f8, #f8f8f8);
+
+$text-color-dark: #333;
+$text-color-light: #fff;
+$text-muted: #fdfdfd;
+$text-color-primary: $primary-color;
+$text-color-secondary: $secondary-color;
+
+$border-color: #ccc;
+$glass-border-color: rgba(255, 255, 255, 0.1);
+$glass-border-color-hover: color.scale(
+    $glass-border-color,
+    $lightness: -15%,
+    $space: hsl
+);
+
+$glass-blur: 20px;
+$glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+$glass-background: rgba(255, 255, 255, 0.03);
+$glass-background-light: rgba(255, 255, 255, 0.1);
+
+// Spacing
+$spacing-xxs: 0.125rem;
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+// padding
+$padding-x: 4rem;
+
+// Typography
+$font-family-secondary: "Sora", sans-serif;
+
+$font-family-primary: "IBM Plex Sans", sans-serif;
+$font-size-h1: 2rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.25rem;
+$font-size-h4: 1rem;
+$font-size-h5: 0.875rem;
+$font-size-h6: 0.75rem;
+
+$font-size-base: 1rem;
+$font-size-small: 0.875rem;
+$font-size-large: 1.25rem;
+
+// Shadows
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+$shadow-light: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+// Trasition
+$transition-speed-normal: 0.3s;
+$transition-speed-fast: 0.15s;
+
+// Others
+$z-index-high: 999;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://samuel.redstoneweb.com.br/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://samuel.redstoneweb.com.br/images/foto-perfil.jpg</image:loc>
+      <image:title>Samuel Conradt do Amaral - Full Stack Developer</image:title>
+    </image:image>
+  </url>
+</urlset>

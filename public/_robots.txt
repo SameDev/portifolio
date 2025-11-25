@@ -1,0 +1,6 @@
+# robots.txt para https://samuel.redstoneweb.com.br
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://samuel.redstoneweb.com.brsitemap.xml
