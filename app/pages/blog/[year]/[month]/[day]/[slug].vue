@@ -34,7 +34,7 @@
                     <img :src="post.coverImage" :alt="post.title" />
                 </div>
 
-                <div class="post-body" v-html="post.content"></div>
+                <div class="post-body" v-html="renderedContent"></div>
 
                 <footer class="post-footer">
                     <div class="tags" v-if="post.tags && post.tags.length">
@@ -58,6 +58,8 @@
 </template>
 
 <script setup lang="ts">
+import { marked } from "marked";
+
 const route = useRoute();
 const slug = computed(() => route.params.slug as string);
 
@@ -65,6 +67,13 @@ const { data, pending, error } = await useFetch(
     () => `/api/blog/${slug.value}`,
 );
 const post = computed(() => data.value?.post);
+
+const renderedContent = computed(() => {
+    if (post.value?.content) {
+        return marked.parse(post.value.content);
+    }
+    return "";
+});
 
 const formatDate = (dateString: string) => {
     if (!dateString) return "";
@@ -75,18 +84,13 @@ const formatDate = (dateString: string) => {
     });
 };
 
-useHead(() => ({
-    title: post.value?.title ? `${post.value.title} - Blog` : "Blog",
-    meta: [
-        { name: "description", content: String(post.value?.excerpt || "") },
-        { property: "og:title", content: String(post.value?.title || "") },
-        {
-            property: "og:description",
-            content: String(post.value?.excerpt || ""),
-        },
-        { property: "og:image", content: String(post.value?.coverImage || "") },
-    ],
-}));
+useSeoMeta({
+    title: () => post.value?.title ? `${post.value.title} - Blog` : "Blog",
+    description: () => post.value?.excerpt,
+    ogTitle: () => post.value?.title,
+    ogDescription: () => post.value?.excerpt,
+    ogImage: () => post.value?.coverImage,
+});
 </script>
 
 <style lang="scss" scoped>
