@@ -2,7 +2,21 @@ import prisma from "../../utils/prisma";
 
 export default defineEventHandler(async (event) => {
   try {
-    const slug = getRouterParam(event, "slug");
+    // Try multiple methods to get the slug parameter
+    let slug = getRouterParam(event, "slug");
+
+    // Fallback: try to get from context
+    if (!slug) {
+      const context = event.context;
+      slug = context.params?.slug;
+    }
+
+    // Fallback: parse from URL path
+    if (!slug) {
+      const path = event.path || event.node.req.url;
+      const match = path?.match(/\/api\/blog\/([^\/\?]+)/);
+      slug = match?.[1];
+    }
 
     if (!slug) {
       throw createError({

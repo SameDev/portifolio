@@ -147,21 +147,26 @@ useHead(() => ({
     meta: [
         {
             name: "description",
-            content: post.value?.excerpt || "Artigo do blog de Samuel Conradt",
+            content: String(
+                post.value?.excerpt || "Artigo do blog de Samuel Conradt",
+            ),
         },
         {
             property: "og:title",
-            content: post.value?.title || "Blog - Samuel Conradt",
+            content: String(post.value?.title || "Blog - Samuel Conradt"),
         },
         {
             property: "og:description",
-            content: post.value?.excerpt || "Artigo do blog de Samuel Conradt",
+            content: String(
+                post.value?.excerpt || "Artigo do blog de Samuel Conradt",
+            ),
         },
         {
             property: "og:image",
-            content:
+            content: String(
                 post.value?.coverImage ||
-                "https://samuel.redstoneweb.com.br/images/og-image.jpg",
+                    "https://samuel.redstoneweb.com.br/images/og-image.jpg",
+            ),
         },
         {
             property: "og:type",

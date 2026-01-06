@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   srcDir: "app/",
   css: ["~/styles/core/_globals.scss"],
   modules: ["@nuxt/image", "@nuxtjs/seo"],
-
   app: {
     head: {
       htmlAttrs: {
