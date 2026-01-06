@@ -1,85 +1,94 @@
 <script setup lang="ts">
 useHead({
-  title: 'Samuel Conradt do Amaral - Full Stack Developer & AI Developer',
-  meta: [
-    { name: 'description', content: 'Portfólio de Samuel Conradt do Amaral - Desenvolvedor Full Stack especializado em Node.js, NestJS, React, Vue.js e Inteligência Artificial. Veja meus projetos e experiência profissional.' }
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-          {
-            '@type': 'Person',
-            '@id': 'https://samuel.redstoneweb.com.br/#person',
-            name: 'Samuel Conradt do Amaral',
-            alternateName: 'Samuel Conradt',
-            description: 'Desenvolvedor Full Stack focado em arquitetura limpa e soluções de alto desempenho',
-            image: 'https://samuel.redstoneweb.com.br/images/foto-perfil.jpg',
-            sameAs: [
-              'https://www.linkedin.com/in/samuel-conradt-b5a77b27a',
-              'https://github.com/SameDev'
-            ],
-            jobTitle: 'Full Stack Developer & AI Developer',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Freelancer'
-            },
-            knowsAbout: [
-              'Node.js',
-              'NestJS', 
-              'React',
-              'Vue.js',
-              'TypeScript',
-              'Python',
-              'Artificial Intelligence',
-              'Machine Learning',
-              'PostgreSQL',
-              'Docker',
-              'AWS'
-            ],
-            email: 'conradtsamuel@gmail.com',
-            url: 'https://samuel.redstoneweb.com.br'
-          },
-          {
-            '@type': 'WebSite',
-            '@id': 'https://samuel.redstoneweb.com.br/#website',
-            url: 'https://samuel.redstoneweb.com.br',
-            name: 'Samuel Conradt do Amaral',
-            description: 'Portfólio profissional de desenvolvedor Full Stack e AI',
-            inLanguage: 'pt-BR',
-            publisher: {
-              '@id': 'https://samuel.redstoneweb.com.br/#person'
-            }
-          },
-          {
-            '@type': 'WebPage',
-            '@id': 'https://samuel.redstoneweb.com.br/#webpage',
-            url: 'https://samuel.redstoneweb.com.br',
-            name: 'Samuel Conradt do Amaral - Portfólio',
-            description: 'Portfólio profissional de Samuel Conradt do Amaral, Full Stack Developer e AI Developer',
-            inLanguage: 'pt-BR',
-            isPartOf: {
-              '@id': 'https://samuel.redstoneweb.com.br/#website'
-            },
-            about: {
-              '@id': 'https://samuel.redstoneweb.com.br/#person'
-            }
-          }
-        ]
-      })
-    }
-  ]
+    title: "Samuel Conradt do Amaral - Full Stack Developer & AI Developer",
+    meta: [
+        {
+            name: "description",
+            content:
+                "Portfólio de Samuel Conradt do Amaral - Desenvolvedor Full Stack especializado em Node.js, NestJS, React, Vue.js e Inteligência Artificial. Veja meus projetos e experiência profissional.",
+        },
+    ],
+    script: [
+        {
+            type: "application/ld+json",
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://samuel.redstoneweb.com.br/#person",
+                        name: "Samuel Conradt do Amaral",
+                        alternateName: "Samuel Conradt",
+                        description:
+                            "Desenvolvedor Full Stack focado em arquitetura limpa e soluções de alto desempenho",
+                        image: "https://samuel.redstoneweb.com.br/images/foto-perfil.jpg",
+                        sameAs: [
+                            "https://www.linkedin.com/in/samuel-conradt-b5a77b27a",
+                            "https://github.com/SameDev",
+                        ],
+                        jobTitle: "Full Stack Developer & AI Developer",
+                        worksFor: {
+                            "@type": "Organization",
+                            name: "Freelancer",
+                        },
+                        knowsAbout: [
+                            "Node.js",
+                            "NestJS",
+                            "React",
+                            "Vue.js",
+                            "TypeScript",
+                            "Python",
+                            "Artificial Intelligence",
+                            "Machine Learning",
+                            "PostgreSQL",
+                            "Docker",
+                            "AWS",
+                        ],
+                        email: "conradtsamuel@gmail.com",
+                        url: "https://samuel.redstoneweb.com.br",
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://samuel.redstoneweb.com.br/#website",
+                        url: "https://samuel.redstoneweb.com.br",
+                        name: "Samuel Conradt do Amaral",
+                        description:
+                            "Portfólio profissional de desenvolvedor Full Stack e AI",
+                        inLanguage: "pt-BR",
+                        publisher: {
+                            "@id": "https://samuel.redstoneweb.com.br/#person",
+                        },
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://samuel.redstoneweb.com.br/#webpage",
+                        url: "https://samuel.redstoneweb.com.br",
+                        name: "Samuel Conradt do Amaral - Portfólio",
+                        description:
+                            "Portfólio profissional de Samuel Conradt do Amaral, Full Stack Developer e AI Developer",
+                        inLanguage: "pt-BR",
+                        isPartOf: {
+                            "@id": "https://samuel.redstoneweb.com.br/#website",
+                        },
+                        about: {
+                            "@id": "https://samuel.redstoneweb.com.br/#person",
+                        },
+                    },
+                ],
+            }),
+        },
+    ],
 });
 
 useSeoMeta({
-  title: 'Samuel Conradt do Amaral - Full Stack Developer & AI Developer',
-  ogTitle: 'Samuel Conradt do Amaral - Full Stack Developer & AI Developer',
-  description: 'Portfólio de Samuel Conradt do Amaral - Desenvolvedor Full Stack especializado em Node.js, NestJS, React, Vue.js e Inteligência Artificial. Veja meus projetos e experiência profissional.',
-  ogDescription: 'Portfólio de Samuel Conradt do Amaral - Desenvolvedor Full Stack especializado em Node.js, NestJS, React, Vue.js e Inteligência Artificial.',
-  ogImage: 'https://samuel.redstoneweb.com.br/images/og-image.jpg',
-  twitterCard: 'summary_large_image',
+    title: "Samuel Conradt do Amaral - Full Stack Developer & AI Developer",
+    ogTitle: "Samuel Conradt do Amaral - Full Stack Developer & AI Developer",
+    description:
+        "Portfólio de Samuel Conradt do Amaral - Desenvolvedor Full Stack especializado em Node.js, NestJS, React, Vue.js e Inteligência Artificial. Veja meus projetos e experiência profissional.",
+    ogDescription:
+        "Portfólio de Samuel Conradt do Amaral - Desenvolvedor Full Stack especializado em Node.js, NestJS, React, Vue.js e Inteligência Artificial.",
+    ogImage: "https://samuel.redstoneweb.com.br/images/og-image.jpg",
+    twitterCard: "summary_large_image",
 });
 </script>
 
@@ -99,7 +108,9 @@ useSeoMeta({
                     </p>
                     <div class="hero-buttons animate-fade-up delay-3">
                         <a href="#contact" class="btn-primary">Contato</a>
-                        <a href="#main-projects" class="btn-secondary">Projetos</a>
+                        <a href="#main-projects" class="btn-secondary"
+                            >Projetos</a
+                        >
                     </div>
                 </div>
             </div>
@@ -111,7 +122,15 @@ useSeoMeta({
                     <div class="about-text">
                         <h2 class="section-title">Sobre Mim</h2>
                         <p>
-                            Desenvolvedor Full Stack focado em arquitetura limpa e soluções de alto desempenho. Com experiência sólida em Node.js, NestJS e React, atuo no desenvolvimento de plataformas complexas, desde sistemas de telemedicina até aplicações com integração de IA. Atualmente cursando Ciência da Computação, sou movido pelo desafio de transformar requisitos de negócio em software seguro, eficiente e escalável.
+                            Desenvolvedor Full Stack focado em arquitetura limpa
+                            e soluções de alto desempenho. Com experiência
+                            sólida em Node.js, NestJS e React, atuo no
+                            desenvolvimento de plataformas complexas, desde
+                            sistemas de telemedicina até aplicações com
+                            integração de IA. Atualmente cursando Ciência da
+                            Computação, sou movido pelo desafio de transformar
+                            requisitos de negócio em software seguro, eficiente
+                            e escalável.
                         </p>
                         <p>
                             Foco em criar soluções que não apenas funcionam, mas
@@ -120,7 +139,12 @@ useSeoMeta({
                         </p>
                     </div>
                     <div class="about-image">
-                        <NuxtImg src="/images/foto-perfil.jpg" alt="Samuel Conradt do Amaral" width="300" height="300" />
+                        <NuxtImg
+                            src="/images/foto-perfil.jpg"
+                            alt="Samuel Conradt do Amaral"
+                            width="300"
+                            height="300"
+                        />
                     </div>
                 </div>
             </div>
@@ -154,12 +178,14 @@ useSeoMeta({
                         stack="HTML, CSS e JavaScript"
                         link="https://github.com/SameDev/TuneSound"
                     />
-
                 </div>
             </div>
         </section>
 
-        <section id="professional-experience" class="experience section-padding">
+        <section
+            id="professional-experience"
+            class="experience section-padding"
+        >
             <div class="container">
                 <h2 class="section-title">Experiência Profissional</h2>
                 <div class="timeline-container">
@@ -167,7 +193,7 @@ useSeoMeta({
                         role="Desenvolvedor Full Stack Junior"
                         period="Fev 2025 - Presente"
                         impact="Participação em definições técnicas e implementação de fluxos escaláveis sob arquitetura NestJS.
-Engenharia de soluções de comunicação em tempo real, implementando atendimento via vídeo (WebRTC) e integrações automatizadas com WhatsApp API, resultando em maior eficiência operacional no fluxo de pacientes. 
+Engenharia de soluções de comunicação em tempo real, implementando atendimento via vídeo (WebRTC) e integrações automatizadas com WhatsApp API, resultando em maior eficiência operacional no fluxo de pacientes.
 Colaboração ativa no onboarding de novos membros e apoio na padronização de práticas de código (Code Review).
 Definição de arquitetura de software e fluxos de dados, assegurando performance e escalabilidade para suportar o crescimento da base de usuários.
 Auditoria e blindagem de segurança em sistema médico, eliminando mais de 40 vulnerabilidades críticas (incluindo SQL Injection) e reforçando a integridade da aplicação.
@@ -177,8 +203,8 @@ Auditoria e blindagem de segurança em sistema médico, eliminando mais de 40 vu
                     <TimelineItem
                         role="Desenvolvedor Full Stack Autonomo"
                         period="Nov 2023 - Jan 2025"
-                        impact="Desenvolvimento e entrega de soluções Web e Mobile de ponta a ponta, traduzindo requisitos de negócio em produtos digitais escaláveis utilizando Next.js, React e TypeScript. 
-Gestão integral do ciclo de vida dos projetos, desde a concepção e arquitetura até o deploy e otimização, garantindo alinhamento estratégico com as métricas de sucesso dos clientes. 
+                        impact="Desenvolvimento e entrega de soluções Web e Mobile de ponta a ponta, traduzindo requisitos de negócio em produtos digitais escaláveis utilizando Next.js, React e TypeScript.
+Gestão integral do ciclo de vida dos projetos, desde a concepção e arquitetura até o deploy e otimização, garantindo alinhamento estratégico com as métricas de sucesso dos clientes.
 Implementação de boas práticas de segurança e performance, assegurando interfaces responsivas e alta disponibilidade dos serviços entregues.
 "
                         tech="NextJs, React, NestJs, TypeScript, PostgreSQL, MongoDB, PHP, Python e Docker."
@@ -191,14 +217,24 @@ Implementação de boas práticas de segurança e performance, assegurando inter
             <div class="container">
                 <h2 class="section-title">IA & Pesquisa</h2>
                 <div class="ai-grid">
-                    <NuxtLink to="/StartingMusic_TCC_SAMUEL_CONRADT_DO_AMARAL_E_MURILLO_ALBINO.pdf" target="_blank" rel="noopener">
+                    <NuxtLink
+                        to="/StartingMusic_TCC_SAMUEL_CONRADT_DO_AMARAL_E_MURILLO_ALBINO.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         <div class="glass-panel ai-card">
-                        <h3>Starting Music: PLATAFORMA DE STREAMING DE MÚSICA</h3>
-                        <p class="type">Paper / TCC</p>
-                        <p>
-                            Estudo e desenvolvimento de uma plataforma de streaming de música que utiliza algoritmos de machine learning para recomendar faixas, impulsionando artistas iniciantes.
-                        </p>
-                    </div>
+                            <h3>
+                                Starting Music: PLATAFORMA DE STREAMING DE
+                                MÚSICA
+                            </h3>
+                            <p class="type">Paper / TCC</p>
+                            <p>
+                                Estudo e desenvolvimento de uma plataforma de
+                                streaming de música que utiliza algoritmos de
+                                machine learning para recomendar faixas,
+                                impulsionando artistas iniciantes.
+                            </p>
+                        </div>
                     </NuxtLink>
                 </div>
             </div>
@@ -238,7 +274,7 @@ Implementação de boas práticas de segurança e performance, assegurando inter
 </template>
 
 <style lang="scss" scoped>
-@use "../assets/styles/core/variables" as *;
+@use "../styles/core/variables" as *;
 .portfolio-container {
     min-height: 100vh;
     background: radial-gradient(circle at top right, #230909, var(--bg-color));
@@ -264,7 +300,7 @@ Implementação de boas práticas de segurança e performance, assegurando inter
         height: 600px;
         background: radial-gradient(
             circle,
-            rgba(248, 56, 56, 0.15)0%,
+            rgba(248, 56, 56, 0.15) 0%,
             rgba(0, 0, 0, 0) 70%
         );
         border-radius: 50%;

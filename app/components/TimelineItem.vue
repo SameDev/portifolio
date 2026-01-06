@@ -20,7 +20,7 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '../assets/styles/core/variables' as *;
+@use "../styles/core/variables" as *;
 
 .timeline-item {
     position: relative;
@@ -40,9 +40,9 @@ defineProps<{
         border-radius: 50%;
         background: $primary-color;
         box-shadow: 0 0 0 4px rgba(248, 56, 56, 0.2);
-        
+
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 16px;
             left: 7px;
@@ -58,7 +58,7 @@ defineProps<{
 
     .timeline-content {
         padding: 1.5rem;
-        
+
         h3 {
             color: $text-muted;
             margin-bottom: 0.5rem;
@@ -80,7 +80,7 @@ defineProps<{
         .tech {
             font-size: 0.9rem;
             color: $text-muted;
-            
+
             strong {
                 color: $text-muted;
             }
