@@ -13,7 +13,10 @@ function getMarkdownParser(): MarkdownIt {
     })
     
     // Adicionar suporte a KaTeX para fórmulas matemáticas
-    markdownInstance.use(katex)
+    markdownInstance.use(katex, {
+      throwOnError: false,
+      errorColor: '#cc0000'
+    })
     
     // Customizar renderização de imagens para melhor responsividade
     const defaultImageRender = markdownInstance.renderer.rules.image!
@@ -23,7 +26,7 @@ function getMarkdownParser(): MarkdownIt {
     }
 
     // Customizar links para abrir em nova aba
-    const defaultLinkRender = markdownInstance.renderer.rules.link_open!
+    const defaultLinkRender = markdownInstance.renderer.rules.link_open || markdownInstance.renderer.renderToken
     markdownInstance.renderer.rules.link_open = function(tokens, idx, _options, env, renderer) {
       tokens[idx].attrSet('target', '_blank')
       tokens[idx].attrSet('rel', 'noopener noreferrer')
@@ -38,7 +41,7 @@ function preprocessContent(content: string): string {
   // Converter colchetes duplos em cifrões duplos para fórmulas em bloco
   // [[formula]] → $$formula$$
   content = content.replace(/\[\[([\s\S]*?)\]\]/g, (_match, formula) => {
-    return `$$\n${formula}\n$$`
+    return `\n$$${formula}$$\n`
   })
   
   // Converter colchetes simples em cifrões simples para fórmulas inline
