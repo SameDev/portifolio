@@ -107,6 +107,7 @@ export default defineEventHandler(async (event) => {
           title: true,
           slug: true,
           excerpt: true,
+          content: true,
           coverImage: true,
           published: true, // sending published status to admin
           publishedAt: true,
