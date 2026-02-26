@@ -37,7 +37,9 @@ function getMarkdownParser(): MarkdownIt {
 function preprocessContent(content: string): string {
   // Converter colchetes duplos em cifrões duplos para fórmulas em bloco
   // [[formula]] → $$formula$$
-  content = content.replace(/\[\[([\s\S]*?)\]\]/g, '$$\n$$$\1$$$\n$$')
+  content = content.replace(/\[\[([\s\S]*?)\]\]/g, (_match, formula) => {
+    return `$$\n${formula}\n$$`
+  })
   
   // Converter colchetes simples em cifrões simples para fórmulas inline
   // [formula] → $formula$ (mas não se [formula] for um link!)
