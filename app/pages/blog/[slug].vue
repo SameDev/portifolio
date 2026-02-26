@@ -69,6 +69,7 @@
 <script setup lang="ts">
 const route = useRoute();
 const slug = route.params.slug as string;
+const { renderMarkdown } = useMarkdownContent();
 
 interface Author {
     id: string;
@@ -119,12 +120,8 @@ const fetchPost = async () => {
 
 const formattedContent = computed(() => {
     if (!post.value) return "";
-
-    // Convert line breaks to paragraphs
-    return post.value.content
-        .split("\n\n")
-        .map((paragraph) => `<p>${paragraph.replace(/\n/g, "<br>")}</p>`)
-        .join("");
+    
+    return renderMarkdown(post.value.content);
 });
 
 const formatDate = (dateString: string) => {
@@ -421,6 +418,52 @@ useHead(() => ({
         height: auto;
         border-radius: 8px;
         margin: 1.5rem 0;
+    }
+
+    :deep(.blog-image) {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    :deep(.katex-display) {
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+        overflow-x: auto;
+    }
+
+    :deep(.katex) {
+        font-size: 1.1em;
+    }
+
+    :deep(table) {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        th {
+            background: #1a1a1a;
+            color: #ef233c;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #1a1a1a;
+        }
     }
 }
 

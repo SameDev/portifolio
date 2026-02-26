@@ -196,6 +196,9 @@
 
                     <div class="form-group">
                         <label for="content">Conteúdo *</label>
+                        <p class="form-help">
+                            Suporta Markdown, imagens com <code>![alt](url)</code> e fórmulas LaTeX com <code>$formula$</code> (inline) ou <code>$$formula$$</code> (bloco)
+                        </p>
                         <textarea
                             id="content"
                             v-model="formData.content"
@@ -938,6 +941,21 @@ useHead({
         color: #ddd;
         font-weight: 500;
         font-size: 0.95rem;
+    }
+
+    .form-help {
+        margin-bottom: 0.75rem;
+        font-size: 0.85rem;
+        color: #888;
+        line-height: 1.5;
+
+        code {
+            background: #0a0a0a;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: #ef233c;
+            font-family: monospace;
+        }
     }
 
     input,

@@ -188,6 +188,8 @@
 
 <script lang="ts" setup>
 import { onMounted, onBeforeUnmount } from "vue";
+import 'katex/dist/katex.min.css'
+import 'markdown-it-katex/dist/markdown-it-katex.min.css'
 
 let observer: IntersectionObserver | null = null;
 

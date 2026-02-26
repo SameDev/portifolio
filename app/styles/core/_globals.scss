@@ -85,3 +85,31 @@ p {
     line-height: 1.6;
     color: $text-muted;
 }
+
+// Markdown Content Styles
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1.5rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(239, 35, 60, 0.2);
+    }
+}
+
+// KaTeX Math Formula Rendering
+.katex-display {
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.katex {
+    font-size: 1.1em;
+}
