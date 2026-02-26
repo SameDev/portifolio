@@ -34,10 +34,30 @@ function getMarkdownParser(): MarkdownIt {
   return markdownInstance
 }
 
+function preprocessContent(content: string): string {
+  // Converter colchetes duplos em cifrões duplos para fórmulas em bloco
+  // [[formula]] → $$formula$$
+  content = content.replace(/\[\[([\s\S]*?)\]\]/g, '$$\n$$$\1$$$\n$$')
+  
+  // Converter colchetes simples em cifrões simples para fórmulas inline
+  // [formula] → $formula$ (mas não se [formula] for um link!)
+  // Evitar converter [texto](url) - links em markdown
+  content = content.replace(/\[([^\[\]\n]*?)\](?!\()/g, (match, formula) => {
+    // Verificar se parece ser uma fórmula (contém \, números, parênteses, operadores matemáticos)
+    if (/[\\{}()^_|=<>+\-*/]/.test(formula) && !formula.includes('](')) {
+      return `$${formula}$`
+    }
+    return match
+  })
+  
+  return content
+}
+
 export function useMarkdownContent() {
   const renderMarkdown = (content: string): string => {
     const md = getMarkdownParser()
-    return md.render(content)
+    const processedContent = preprocessContent(content)
+    return md.render(processedContent)
   }
 
   return {
